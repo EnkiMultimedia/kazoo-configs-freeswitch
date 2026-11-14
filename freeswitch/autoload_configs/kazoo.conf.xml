@@ -4,9 +4,9 @@
 	<settings>
 		<param name="listen-ip" value="0.0.0.0" />
 		<param name="listen-port" value="8031" />
-		<param name="cookie" value="change_me" />
+		<param name="cookie" value="$${kazoo_cookie}" />
 		<param name="shortname" value="false" />
-		<param name="nodename" value="freeswitch" />
+		<param name="nodename" value="$${kazoo_nodename}" />
 
 		<param name="event-stream-preallocate" value="32768" />
 		<param name="receive-msg-preallocate" value="32768" />

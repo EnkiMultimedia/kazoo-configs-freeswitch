@@ -40,6 +40,13 @@
     <X-PRE-PROCESS cmd="set" data="sip_copy_custom_headers=K-|P-Test"/>
     <X-PRE-PROCESS cmd="set" data="execute_on_fax_result_zz=hangup"/>
 
+    <!-- mod_kazoo node settings; KAZOO_COOKIE and KAZOO_NODENAME in the
+         environment override the defaults -->
+    <X-PRE-PROCESS cmd="set" data="kazoo_cookie=change_me"/>
+    <X-PRE-PROCESS cmd="set" data="kazoo_nodename=freeswitch"/>
+    <X-PRE-PROCESS cmd="env-set" data="kazoo_cookie=$KAZOO_COOKIE"/>
+    <X-PRE-PROCESS cmd="env-set" data="kazoo_nodename=$KAZOO_NODENAME"/>
+
     <section name="configuration" description="Various Configuration">
         <X-PRE-PROCESS cmd="include" data="autoload_configs/*.xml"/>
     </section>
